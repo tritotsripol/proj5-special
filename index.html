@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Characters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <script src="script.js" defer></script>
+  <style>
+    .Kanit {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body class="Kanit">
+  <section class="header">
+    <div><img src="favicon.png" width="75px" height="75px" alt="favicon"></div>
+    <div><h1 style="font-size: 50px; line-height: 1em">Trithod Site</h1></div>
+    <div class="home"><a href="https://tritotsripol.github.io/trithodhome/"><button data-en="Home" data-th="หน้าหลัก"></button></a></div>
+  </section>
+
+  <section class="web">
+
+    <h1 class="title-box" style="font-size: 50px;" data-en="Special Characters" data-th="ตัวอักษรพิเศษ"></h1>
+    
+    <div>
+      <label id="textToCopy" style="position: relative;">
+        <input class="label" id="copyHistory">
+        <button id="copyButton" class="copy" data-en="Copy" data-th="คัดลอก"></button>
+      </label>
+    </div>
+
+    <!-- latin -->
+    <details>
+      <summary class="droppy">Latin , English</summary>
+      <div>
+        <section class="cat">
+          <div>A</div>
+          <div id="a" class="keyboard-button"></div>
+
+          <div>B - D</div>
+          <div id="btod" class="keyboard-button"></div>
+
+          <div>E</div>
+          <div id="e" class="keyboard-button"></div>
+
+          <div>F - H</div>
+          <div id="ftoh" class="keyboard-button"></div>
+
+          <div>I</div>
+          <div id="i" class="keyboard-button"></div>
+
+          <div>J - L</div>
+          <div id="jtol" class="keyboard-button"></div>
+
+          <div>M - N</div>
+          <div id="mton" class="keyboard-button"></div>
+
+          <div>O</div>
+          <div id="o" class="keyboard-button"></div>
+
+          <div>P - R</div>    
+          <div id="ptor" class="keyboard-button"></div>
+
+          <div>S - T</div>
+          <div id="stot" class="keyboard-button"></div>
+
+          <div>U</div>
+          <div id="u" class="keyboard-button"></div>
+
+          <div>V - X</div>
+          <div id="vtox" class="keyboard-button"></div>
+
+          <div>Y - Z</div>
+          <div id="ytoz" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <!-- thai -->
+    <details>
+      <summary class="droppy">Thai , Laos , Khmer</summary>
+      <div>
+        <section class="cat">
+          <div class="tablelang">
+            <div>ก - ซ</div>
+            <div>ກ - ຊ</div>
+            <div>ក - ជ</div>
+          </div>
+          <div id="gotoso" class="keyboard-button"></div>
+
+          <div class="tablelang">
+            <div>ฌ - น</div>
+            <div>ດ - ນ</div>
+            <div>ឈ - ន</div>
+          </div>
+          <div id="chotono" class="keyboard-button"></div>
+        
+          <div class="tablelang">
+            <div>บ - ว</div>
+            <div>ບ - ວ</div>
+            <div>ប - វ</div>
+          </div>
+          <div id="botowo" class="keyboard-button"></div>
+        
+          <div class="tablelang">
+            <div>ศ - ฮ</div>
+            <div>ສ - ຮ</div>
+            <div>ឝ - អ</div>
+          </div>
+          <div id="sotoho" class="keyboard-button"></div>
+
+          <div data-en="Inline vowels and Punctuation marks" data-th="สระในบรรทัด และ เครื่องหมายวรรคตอน"></div>
+          <div id="inlVow" class="keyboard-button"></div>
+
+          <div data-en="High vowels and Low vowels" data-th="สระบน และ สระล่าง"></div>
+          <div id="hiloVow" class="keyboard-button"></div>
+
+          <div data-en="Numbers" data-th="ตัวเลข"></div>
+          <div id="num" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <!-- east -->
+    <details>
+      <summary class="droppy">Chinese , Japanese , Korean</summary>
+      <div>
+        <section class="cat">
+          <div>Chinese</div>
+          <div id="chi" class="keyboard-button"></div>
+
+          <div>Japanese</div>
+          <div id="jap" class="keyboard-button"></div>
+
+          <div>Korean</div>
+          <div id="kor" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+  </section>
+
+  <section class="footer"
+    data-en="© 2025 Trithod Site. Made by Trithot Sripol."
+    data-th="© 2568 Trithod Site. จัดทำโดย ไตรทศ ศรีพล.">
+  </section>
+
+  <section class="buttons">
+    <!-- languagebtn -->
+    <div>
+      <select class="sectionbtn" id="option" name="option" onchange="changeLanguage(this.value)">
+        <option value="en">ENG</option>
+        <option value="th">ไทย</option>
+      </select>
+    </div>
+  
+      <!-- light theme -->
+      <div>
+        <button class="themebtn" id="theme-toggle">
+          <img class="themeicon" id="theme-icon" src="moon-icon.png" alt="Theme Icon" width="25" height="25">
+        </button>
+      </div>
+
+      <!-- ฺgo to top btn -->
+    <div>
+      <button class="gotop">
+      <img src="up-icon.png" width="25" height="25" class="uppy">
+      </button>
+    </div>
+  
+  </section>
+
+</body>
+</html>
