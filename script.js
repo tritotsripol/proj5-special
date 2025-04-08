@@ -19,6 +19,16 @@ const copyButton = document.getElementById('copyButton');
       document.body.appendChild(toast);
     }
 
+    const isLight = document.body.classList.contains('light');
+  
+  if (isLight) {
+    toast.style.background = '#020617';
+    toast.style.color = '#fff';
+  } else {
+    toast.style.background = '#fff';
+    toast.style.color = '#020617';
+  }
+
     toast.textContent = message;
     toast.style.opacity = '1';
 
