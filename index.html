@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap" rel="stylesheet">
   <meta property="og:image" content="favicon.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <script src="script.js" defer></script>
   <style>
     .Kanit {
@@ -34,9 +34,31 @@
       </label>
     </div>
 
+    <div class="sect" data-en="Special Characters" data-th="อักษรพิเศษ"></div>
+
+    <!-- fancy -->
+    <details>
+      <summary class="droppy" data-en="Fancy text" data-th="อักษรสวยๆ"></summary>
+      <div>
+        <section class="cat">
+          <div data-en="Fantacy" data-th="แฟนตาซี"></div>
+          <div id="fanc" class="keyboard-button"></div>
+
+          <div data-en="Regular" data-th="ทั่วไป"></div>
+          <div id="reg" class="keyboard-button"></div>
+
+          <div data-en="Circle and Square" data-th="วงกลม และ สี่เหลี่ยม"></div>
+          <div id="cirqua" class="keyboard-button"></div>
+
+          <div data-en="Superscript" data-th="ห้อยบน"></div>
+          <div id="supt" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
     <!-- latin -->
     <details>
-      <summary class="droppy">Latin , English</summary>
+      <summary class="droppy" data-en="Latin , English" data-th="ละติน , อังกฤษ"></summary>
       <div>
         <section class="cat">
           <div>A</div>
@@ -83,7 +105,7 @@
 
     <!-- thai -->
     <details>
-      <summary class="droppy">Thai , Laos , Khmer</summary>
+      <summary class="droppy" data-en="Thai , Laos , Khmer" data-th="ไทย , ลาว , เขมร"></summary>
       <div>
         <section class="cat">
           <div class="tablelang">
@@ -128,19 +150,148 @@
 
     <!-- east -->
     <details>
-      <summary class="droppy">Chinese , Japanese , Korean</summary>
+      <summary class="droppy" data-en="Chinese , Japanese , Korean" data-th="จีน , ญี่ปุ่น , เกาหลี"></summary>
       <div>
         <section class="cat">
-          <div>Chinese</div>
+          <div data-en="Chinese" data-th="จีน"></div>
           <div id="chi" class="keyboard-button"></div>
 
-          <div>Japanese</div>
+          <div data-en="Japanese" data-th="ญี่ปุ่น"></div>
           <div id="jap" class="keyboard-button"></div>
 
-          <div>Korean</div>
+          <div data-en="Korean" data-th="เกาหลี"></div>
           <div id="kor" class="keyboard-button"></div>
         </section>
       </div>
+    </details>
+
+    <div class="sect" data-en="Writing Scripts" data-th="ระบบการเขียนอักษร"></div>
+
+    <!--southbhram-->
+    <details>
+      <summary class="droppy" data-en="Southern Brahmic" data-th="พราหมีใต้"></summary>
+      <div>
+        <section class="cat">
+          <div>Tamil</div><div id="tamil" class="keyboard-button"></div>
+          <div>Malayalam</div><div id="malayalam" class="keyboard-button"></div>
+          <div>Saurashtra</div><div id="saurashtra" class="keyboard-button"></div>
+          <div>Ahom</div><div id="ahom" class="keyboard-button"></div>
+          <div>Sinhala</div><div id="sinhala" class="keyboard-button"></div>
+          <div>Kanada</div><div id="kanada" class="keyboard-button"></div>
+          <div>Khmer</div><div id="khmer" class="keyboard-button"></div>
+          <div>Cham</div><div id="cham" class="keyboard-button"></div>
+          <div>Balinese</div><div id="balinese" class="keyboard-button"></div>
+          <div>Batak</div><div id="batak" class="keyboard-button"></div>
+          <div>Buhid</div><div id="buhid" class="keyboard-button"></div>
+          <div>Hanunó'o</div><div id="hanuno" class="keyboard-button"></div>
+          <div>Javanese</div><div id="javanese" class="keyboard-button"></div>
+          <div>Buginese</div><div id="buginese" class="keyboard-button"></div>
+          <div>Sudanese</div><div id="sudanese" class="keyboard-button"></div>
+          <div>Miao</div><div id="miao" class="keyboard-button"></div>
+          <div>Nyiakeng Puachue Hmong</div><div id="nyia" class="keyboard-button"></div>
+          <div>Thai</div><div id="thai" class="keyboard-button"></div>
+          <div>Lao</div><div id="lao" class="keyboard-button"></div>
+          <div>Burmese</div><div id="burmese" class="keyboard-button"></div>
+          <div>Tai Le</div><div id="taile" class="keyboard-button"></div>
+          <div>Tai Lue</div><div id="tailue" class="keyboard-button"></div>
+          <div>Chakma</div><div id="chakma" class="keyboard-button"></div>
+          <div>Kayah Li</div><div id="kayahli" class="keyboard-button"></div>
+          <div>Lisu</div><div id="lisu" class="keyboard-button"></div>
+          <div>Tibetan</div><div id="tibetan" class="keyboard-button"></div>
+          <div>Yi</div><div id="yi" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <!-- northbhram -->
+    <details>
+      <summary class="droppy" data-en="Northern Brahmic" data-th="พราหมีเหนือ"></summary>
+      <div>
+        <section class="cat">
+          <div>Brahmi</div><div id="brahmi" class="keyboard-button"></div>
+          <div>Sharada</div><div id="sharada" class="keyboard-button"></div>
+          <div>Gurmukhi</div><div id="gurmukhi" class="keyboard-button"></div>
+          <div>Khojki</div><div id="khojki" class="keyboard-button"></div>
+          <div>Khudawadi</div><div id="khudawadi" class="keyboard-button"></div>
+          <div>Mahajani</div><div id="mahajani" class="keyboard-button"></div>
+          <div>Multani</div><div id="multani" class="keyboard-button"></div>
+          <div>Takri</div><div id="takri" class="keyboard-button"></div>
+          <div>Dogra</div><div id="dogra" class="keyboard-button"></div>
+          <div>Devanagari</div><div id="devanagari" class="keyboard-button"></div>
+          <div>Modi</div><div id="modi" class="keyboard-button"></div>
+          <div>Gujarati</div><div id="gujarati" class="keyboard-button"></div>
+          <div>Kaithi</div><div id="kaithi" class="keyboard-button"></div>
+          <div>Bengali</div><div id="bengali" class="keyboard-button"></div>
+          <div>Tirhuta</div><div id="tirhuta" class="keyboard-button"></div>
+          <div>Oriya</div><div id="oriya" class="keyboard-button"></div>
+          <div>Soyombo</div><div id="soyombo" class="keyboard-button"></div>
+          <div>Meetei Mayek</div><div id="meetei" class="keyboard-button"></div>
+          <div>Lepcha</div><div id="lepcha" class="keyboard-button"></div>
+          <div>Limbu</div><div id="limbu" class="keyboard-button"></div>
+          <div>Phags-pa</div><div id="phagspa" class="keyboard-button"></div>
+          <div>Zanabazar Square</div><div id="zanabazar" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <!-- thaaethicana-->
+    <details>
+      <summary class="droppy" data-en="Thaana , Ethiopic , Canadian Aboriginal syllabics" data-th="ทานา , เอธิโอปิก , อักษรพยางค์แคนาดา"></summary>
+      <div>
+        <section class="cat">
+          <div>Thaana</div><div id="thaana" class="keyboard-button"></div>
+          <div>Ethiopic</div><div id="ethiopic" class="keyboard-button"></div>
+          <div>Canadian Aboriginal syllabics</div><div id="canabo" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <!--arabhib-->
+    <details>
+      <summary class="droppy" data-en="Arabic , Hebrew" data-th="อาหรับ , ฮิบรู"></summary>
+      <div>
+        <section class="cat">
+          <div>Arabic</div><div id="arabic" class="keyboard-button"></div>
+          <div>Hebrew</div><div id="hebrew" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+  
+    <!--alphabetical-->
+    <details>
+      <summary class="droppy" data-en="Alphabetical + Cherokee" data-th="อักษรตามลำดับตัวอักษร + เชอโรกี"></summary>
+      <div>
+        <section class="cat">
+          <div>Armenian</div><div id="armenian" class="keyboard-button"></div>
+          <div>Cyrillic</div><div id="cyrillic" class="keyboard-button"></div>
+          <div>Georgian</div><div id="georgian" class="keyboard-button"></div>
+          <div>Greek</div><div id="greek" class="keyboard-button"></div>
+          <div>Mongolian</div><div id="mongolian" class="keyboard-button"></div>
+          <div>Tifinagh</div><div id="tifinagh" class="keyboard-button"></div>
+          <div>Osage</div><div id="osage" class="keyboard-button"></div>
+          <div>Cherokee</div><div id="cherokee" class="keyboard-button"></div>
+        </section>
+      </div>
+    </details>
+
+    <div class="sect" data-en="Others" data-th="อักษรอื่นๆ"></div>
+
+    <!--ancient-->
+    <details>
+      <summary class="droppy" data-en="Ancient" data-th="อักษรโบราณ"></summary>
+      <section class="cat">
+        <div>Runic</div><div id="runic" class="keyboard-button"></div>
+        <div>Phoenician</div><div id="phoenician" class="keyboard-button"></div>
+        <div>Egyptian Hieroglyphs</div><div id="egypt" class="keyboard-button"></div>
+      </section>
+    </details>
+
+    <!--phonetic-->
+    <details>
+      <summary class="droppy" data-en="IPA , Phonetic" data-th="สัญลักษณ์การออกเสียง"></summary>
+      <section class="cat">
+        <div>IPA , Phonetic</div><div id="ipapho" class="keyboard-button"></div>
+      </section>
     </details>
 
   </section>

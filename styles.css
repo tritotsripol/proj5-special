@@ -127,14 +127,30 @@ body {
   border: none;
   font-weight: bold;
 }
-.cat div:nth-child(odd):not(.tablelang div), .droppy{
-  background: #030712;
+.cat div:nth-child(odd):not(.tablelang div), .droppy, body.light .sect{
+  background-color: #030712;
   color: white;
   padding: 0.5em;
   text-align: center;
   font-size: 20px;
   margin-top: 15px;
   border-radius: 5px;
+}
+details[open] > summary.droppy {
+  background-color: white;
+  color: #030712;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+details > div {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 3s ease, opacity 3s ease, transform 3s ease;
+}
+details[open] > div {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tablelang {
@@ -387,9 +403,14 @@ body.light .keyboard-button > button:hover {
   box-shadow: 0 0 5px #00000080;
   border: #020617 1px solid;
 }
-body.light .cat div:nth-child(odd):not(.tablelang div), body.light .droppy{
-  background: #e2e8f0;
+body.light .cat div:nth-child(odd):not(.tablelang div), body.light .droppy, .sect{
+  background: white;
   color: #020617;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 body.light .copy {
@@ -399,5 +420,9 @@ body.light .copy {
 }
 body.light .copy:hover {
   background: #020617;
+  color: white;
+}
+body.light details[open] > summary.droppy {
+  background-color: #030712;
   color: white;
 }
