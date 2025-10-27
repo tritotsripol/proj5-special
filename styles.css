@@ -58,7 +58,7 @@ h1 {
   margin:25px;
 }
 body {
-  background-color: #0f172a ;
+  background-color: #141822 ;
   margin: 0;
 }
 .title-box {
@@ -68,14 +68,14 @@ body {
   padding-bottom: 0.5em;
   padding-left:10px;
   padding-right:10px;
-  border-radius: 25px;
-  background-image: url(blackpat.jpg);
-  background-size: cover;
+  border-radius: 15px;
+  border: 1px solid white;
+  background: linear-gradient(to bottom , #ffffff80, #ffffff20);
 }
 .label {
   background: #00000080;
   border: white 1px solid;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   font-family: Kanit;
   font-size: 20px;
@@ -105,9 +105,9 @@ body {
   text-align: center;
 }
 .keyboard-button > button {
-  background: #00000080;
-  border: black 1px solid;
-  border-radius: 5px;
+  background: #03071280;
+  border: #030712 1px solid;
+  border-radius: 10px;
   color: white;
   font-family: Kanit;
   font-size: 20px;
@@ -134,7 +134,7 @@ body {
   text-align: center;
   font-size: 20px;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 details[open] > summary.droppy {
   background-color: white;
@@ -165,8 +165,8 @@ details[open] > div {
   right: 0;
   background: #00000080;
   border: white 1px solid;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: white;
   font-family: Kanit;
   height: 50px;
@@ -206,7 +206,7 @@ details[open] > div {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #1e293b80;
+  box-shadow:0 0 5px #ffffff80;
   transition: background-color 1s ease, box-shadow 1s ease;
 }
 .gotop:hover {
@@ -232,7 +232,7 @@ details[open] > div {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border: solid 1px black;
-  box-shadow:0 0 5px #1e293b80;
+  box-shadow:0 0 5px #ffffff80;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 .sectionbtn:hover {
@@ -272,7 +272,7 @@ select.sectionbtn option {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
   border: solid 1px black;
-  box-shadow:0 0 5px #1e293b80;
+  box-shadow:0 0 5px #ffffff80;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 .themebtn:hover {
@@ -296,7 +296,7 @@ body::-webkit-scrollbar {
   height: 15px;
 }
 body::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: white;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -320,13 +320,13 @@ body.light::-webkit-scrollbar {
   background: rgba(255,255,255, 0.5);
 }
 body.light::-webkit-scrollbar-thumb {
-  background: #94a3b880;
+  background: #020617;
 }
 
 body.light .gotop, body.light .themebtn {
   background-color: rgba(255,255,255,0.5);
   border: solid 1px white;
-  box-shadow:0 0 5px #e2e8f080;
+  box-shadow:0 0 5px #02061780;
   transition: background-color 1s ease, box-shadow 1s ease;
 }
 body.light .gotop:hover, body.light .themebtn:hover {
@@ -340,7 +340,7 @@ body.light .uppy, body.light .themeicon {
 body.light .sectionbtn {
   background-color: rgba(255,255,255,0.5);
   border: solid 1px white;
-  box-shadow:0 0 5px #e2e8f080;
+  box-shadow:0 0 5px #02061780;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 body.light .sectionbtn:hover {
@@ -386,6 +386,11 @@ body.light {
   background-color: #cbd5e1 ;
 }
 
+body.light .title-box {
+  color: #020617;
+  border: 1px solid #020617;
+  background: linear-gradient(to bottom , #02061780, #02061720);
+}
 
 body.light .label {
   background: #ffffff80;
@@ -410,7 +415,7 @@ body.light .cat div:nth-child(odd):not(.tablelang div), body.light .droppy, .sec
   text-align: center;
   font-size: 20px;
   margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 body.light .copy {
