@@ -13,6 +13,7 @@ h1 {
   justify-content: start;
   align-items: center;
   gap: 2.5em;
+  border-radius: 0 0 25px 25px;
 }
 .home {
   flex-grow: 1;
@@ -25,20 +26,54 @@ h1 {
   transition: font-weight 0.5s ease, font-size 0.5s ease;
 }
 .home > a > button {
+  position: relative;
+  width: 75px !important;
+  height: 75px;
   cursor: pointer;
   color: white;
   background: #00000080;
   border-radius: 15px;
-  border: 1px solid black;
+  border: none;
   width: 5em;
   font-size: 20px;
   font-family: Kanit;
-  transition: background 1s ease, box-shadow 1s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 .home > a > button:hover {
   background: black;
-  box-shadow: 0 0 5px rgba(0,0,0, 1);
+}
+.home > a > button > img {
+  opacity: 50%;
+  transition: opacity 0.5s ease;
+}
+.home > a > button:hover > img {
+  opacity: 100%;
+}
+.home > a > button > div {
+  opacity: 0.5;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  mask-image: url('home-icon.png');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: white;
+  transition: opacity 0.5s ease; 
+}
+.home > a > button:hover > div {
+  opacity: 1;
+}
+.semiicon {
+  width: 75px;
+  height: 75px;
+  mask-image: url('semi-icon.png');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: white;
 }
 .footer {
   background: #00000080;
@@ -53,12 +88,15 @@ h1 {
   box-sizing: border-box;
   margin-top:auto;
   z-index: -1;
+  border-radius: 25px 25px 0 0;
 }
 .web {
   margin:25px;
 }
 body {
-  background-color: #141822 ;
+  background: radial-gradient(circle at center, #496fae40 0%, transparent 75%), #0C101A ;
+  background-size: cover;
+  height: 100vh;
   margin: 0;
 }
 .title-box {
@@ -69,12 +107,11 @@ body {
   padding-left:10px;
   padding-right:10px;
   border-radius: 15px;
-  border: 1px solid white;
-  background: linear-gradient(to bottom , #ffffff80, #ffffff20);
+  background: #293d6380;
 }
 .label {
-  background: #00000080;
-  border: white 1px solid;
+  background: #293d6380;
+  border: none;
   border-radius: 10px;
   color: white;
   font-family: Kanit;
@@ -85,6 +122,9 @@ body {
   width: 100%;
   height: 50px;
   backdrop-filter: blur(5px); 
+}
+.label:focus {
+  outline: none;
 }
 .label.fixed {
   position: fixed;
@@ -105,8 +145,8 @@ body {
   text-align: center;
 }
 .keyboard-button > button {
-  background: #03071280;
-  border: #030712 1px solid;
+  background: #27355340;
+  border: none;
   border-radius: 10px;
   color: white;
   font-family: Kanit;
@@ -122,13 +162,12 @@ body {
 }
 .keyboard-button > button:hover {
   background: white;
-  color: #030712;
-  box-shadow: 0 0 5px #ffffff80;
+  color: #0C101A;
   border: none;
   font-weight: bold;
 }
 .cat div:nth-child(odd):not(.tablelang div), .droppy, body.light .sect{
-  background-color: #030712;
+  background-color: #27355340;
   color: white;
   padding: 0.5em;
   text-align: center;
@@ -137,8 +176,8 @@ body {
   border-radius: 10px;
 }
 details[open] > summary.droppy {
-  background-color: white;
-  color: #030712;
+  background-color: #293d6380;
+  color: white;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 details > div {
@@ -163,8 +202,8 @@ details[open] > div {
 .copy {
   position: absolute;
   right: 0;
-  background: #00000080;
-  border: white 1px solid;
+  background: #293d6300;
+  border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
@@ -175,9 +214,22 @@ details[open] > div {
   font-size: 20px;
   transition: background 0.5s ease, color 0.5s ease;
 }
+.copy > div {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .copy:hover {
   background: white;
   color: black;
+}
+.copy > div > img {
+  transition: filter 0.5s ease;
+}
+.copy:hover > div > img {
+  filter: invert(1);
 }
 .copy.fixed {
   position: fixed;
@@ -186,13 +238,21 @@ details[open] > div {
   z-index: 1000;
   margin: 25px;
 }
-
+.sect {
+  background: #293d6380;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
 /* buttons */
 .buttons {
   display: flex;
   flex-wrap: nowrap;
-  gap: 5px;
   position: fixed;
+  gap: 0px;
   inset: auto 15px 15px auto;
 }
 /* buttons */
@@ -203,22 +263,20 @@ details[open] > div {
   height: 3em;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #ffffff80;
-  transition: background-color 1s ease, box-shadow 1s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 .gotop:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0, 1);
 }
 .uppy {
   filter: invert(1);
   opacity: 0.5;
 }
 .gotop:hover .uppy {
-  transition: opacity 1s ease;  
+  transition: opacity 0.5s ease;  
   opacity: 1;
 }
 /* gotop button */
@@ -229,15 +287,13 @@ details[open] > div {
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #ffffff80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .sectionbtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .sectionbtn:focus {
   outline: none;
@@ -261,7 +317,7 @@ select.sectionbtn div {
 select.sectionbtn option {
   color: white;
   font-family: 'Kanit', sans-serif;
-  background-color:#1f1f1f;
+  background-color:black;
 }
 /* sectionbtn */
 
@@ -271,13 +327,11 @@ select.sectionbtn option {
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border: solid 1px black;
-  box-shadow:0 0 5px #ffffff80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .themebtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .themeicon {
   filter: invert(1);
@@ -290,13 +344,12 @@ select.sectionbtn option {
 /* themebtn */
 
 body::-webkit-scrollbar {
-  background: rgba(0,0,0, 0.5);
-  border-radius: 25px;
+  background: #0C101A;
   width: 15px;
   height: 15px;
 }
 body::-webkit-scrollbar-thumb {
-  background: white;
+  background: #293d63;
   border-radius: 25px;
   width: 50%;
   height: 15px;
@@ -317,21 +370,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 body.light::-webkit-scrollbar {
-  background: rgba(255,255,255, 0.5);
+  background: #ccd6eb ;
 }
 body.light::-webkit-scrollbar-thumb {
-  background: #020617;
+  background: #9fb4da;
 }
 
 body.light .gotop, body.light .themebtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #02061780;
   transition: background-color 1s ease, box-shadow 1s ease;
 }
 body.light .gotop:hover, body.light .themebtn:hover {
   background-color: white;
-  box-shadow: 0 0 5px rgba(255,255,255, 1);
 }
 body.light .uppy, body.light .themeicon {
   filter: invert(0);
@@ -339,8 +389,6 @@ body.light .uppy, body.light .themeicon {
 }
 body.light .sectionbtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #02061780;
   transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
 }
 body.light .sectionbtn:hover {
@@ -363,71 +411,73 @@ body.light select.sectionbtn option {
 
 body.light .header, body.light .footer {
   background: #ffffff80;
-  color: #13364e;
+  color: #0C101A;
+}
+body.light .semiicon {
+  background-color: #0C101A;
+}
+body.light .home > a > button > div {
+  background-color: #0C101A;
 }
 body.light .home>a {
-  color: #13364e;
+  color: #0C101A;
 }
 body.light .home > a{
-  color: #13364e;
+  color: #0C101A;
 }
 body.light .home > a > button {
-  color: #13364e;
+  color: #0C101A;
   background: #ffffff80;
-  border: 1px solid white;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 body.light .home > a > button:hover {
   background: white;
-  box-shadow: 0 0 5px rgba(255,255,255, 1);
 }
 
 body.light {
-  background-color: #cbd5e1 ;
+  background: radial-gradient(circle at center , #9fb4da80 0%, transparent 75%),#ccd6eb ;
 }
 
 body.light .title-box {
   color: #020617;
-  border: 1px solid #020617;
-  background: linear-gradient(to bottom , #02061780, #02061720);
+  background: #e8ecf6c0;
 }
 
 body.light .label {
-  background: #ffffff80;
-  border: #020617 1px solid;
+  background: #e8ecf6c0;
   color: #020617;
 }
 body.light .keyboard-button > button {
-  background: #ffffff80;
-  border: white 1px solid;
+  background: #ffffff40;
   color: #020617;
 }
 body.light .keyboard-button > button:hover {
   background: #020617;
   color: #e2e8f0;
-  box-shadow: 0 0 5px #00000080;
-  border: #020617 1px solid;
 }
-body.light .cat div:nth-child(odd):not(.tablelang div), body.light .droppy, .sect{
-  background: white;
+body.light .cat div:nth-child(odd):not(.tablelang div), body.light .droppy{
+  background: #ffffff40;
   color: #020617;
-  padding: 0.5em;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 15px;
-  border-radius: 10px;
 }
 
 body.light .copy {
-  background: #ffffff80;
-  border: #020617 1px solid;
+  background: #e8ecf600;
   color: #020617;
+}
+body.light .copy > div > img {
+  filter: invert(1);
 }
 body.light .copy:hover {
   background: #020617;
   color: white;
 }
+body.light .copy:hover > div > img {
+  filter: invert(0);
+}
 body.light details[open] > summary.droppy {
-  background-color: #030712;
-  color: white;
+  background-color: #e8ecf6c0;
+  color: #020617;
+}
+body.light .sect {
+  background-color: #e8ecf6c0;
+  color: #020617;
 }
